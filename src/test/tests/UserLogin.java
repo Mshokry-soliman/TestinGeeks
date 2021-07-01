@@ -16,6 +16,7 @@ public class UserLogin extends TestBase {
 
     LoginPage loginObject;
 
+    //Login with correct credentials
     @Test
     public void UserLoginSuccessfully() throws InterruptedException {
 
@@ -29,12 +30,12 @@ public class UserLogin extends TestBase {
         }
     }
 
+    //Login with no credentials
     @Test
     public void Userunabletologin() throws InterruptedException {
 
         loginObject = new LoginPage(driver);
         loginObject.logIn.click();
-        loginObject.email.sendKeys("testinggeeks@hotmail.com");
         loginObject.loginBtn.click();
         Thread.sleep(3000);
 
